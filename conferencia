@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Conferir Prontuários</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f2f4f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0077b6, #0096c7);
+            padding: 80px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Menu */
+        nav {
+            background: white;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #0077b6;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #023e8a;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #0077b6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #001219;
+            color: white;
+            text-align: center;
+            padding: 25px 10px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            opacity: 0.7;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card i {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #0096c7;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#o-que-e">O que é?</a></li>
+            <li><a href="#preparo">Preparo</a></li>
+            <li><a href="#passos">Passo a passo</a></li>
+            <li><a href="#privacidade">Privacidade</a></li>
+            <li><a href="#finalizacao">Finalização</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Guia Completo para Conferência de Prontuários</h1>
+        <p>Boas práticas, organização e verificação administrativa com clareza e segurança.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- O QUE É -->
+        <section id="o-que-e">
+            <h2><i class="fa-solid fa-notes-medical"></i> O que é um prontuário?</h2>
+            <p>
+                O prontuário é o conjunto de informações registradas por profissionais de saúde durante o atendimento ao paciente.
+                Ele deve ser organizado, padronizado e protegido, seguindo normas legais e institucionais.
+            </p>
+        </section>
+
+        <!-- PREPARO -->
+        <section id="preparo">
+            <h2><i class="fa-solid fa-clipboard-check"></i> Antes de começar a conferência</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-id-card"></i>
+                    <h3>Autorização</h3>
+                    <p>Confirme que você tem permissão para acessar e revisar os prontuários.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Sigilo</h3>
+                    <p>Respeite a confidencialidade dos dados e siga normas como a LGPD.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <h3>Checklist</h3>
+                    <p>Tenha em mãos o protocolo de conferência adotado pela instituição.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PASSOS -->
+        <section id="passos">
+            <h2><i class="fa-solid fa-list-ul"></i> Passo a passo da conferência</h2>
+            <ul>
+                <li><strong>1. Identificação:</strong> nome completo, data de nascimento e número de registro.</li>
+                <li><strong>2. Organização física/digital:</strong> páginas ordenadas, datas, assinaturas e documentos anexos.</li>
+                <li><strong>3. Registros de atendimento:</strong> cada atendimento deve incluir data, horário e identificação do profissional.</li>
+                <li><strong>4. Legibilidade:</strong> verificar se as informações estão claras e compreensíveis.</li>
+                <li><strong>5. Completude:</strong> todos os campos obrigatórios devem estar preenchidos.</li>
+                <li><strong>6. Conformidade institucional:</strong> checar se segue padrões e normas internas.</li>
+            </ul>
+        </section>
+
+        <!-- PRIVACIDADE -->
+        <section id="privacidade">
+            <h2><i class="fa-solid fa-lock"></i> Cuidados com a privacidade</h2>
+            <p>
+                Dados de saúde são informações sensíveis. Evite compartilhar, reproduzir ou acessar sem justificativa.
+                Utilize sempre sistemas protegidos e siga os protocolos estabelecidos pela sua instituição.
+            </p>
+        </section>
+
+        <!-- FINALIZAÇÃO -->
+        <section id="finalizacao">
+            <h2><i class="fa-solid fa-check-double"></i> Finalizando a conferência</h2>
+            <ul>
+                <li>Registre inconsistências conforme o procedimento institucional.</li>
+                <li>Informe o setor responsável sobre possíveis correções.</li>
+                <li>Garanta que o prontuário seja armazenado adequadamente após o uso.</li>
+                <li>Mantenha sigilo e respeite a privacidade dos dados revisados.</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>
