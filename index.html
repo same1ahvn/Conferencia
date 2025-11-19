@@ -12,39 +12,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #f2f4f7;
+            background: #e9f5ec;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.7;
+        }
+
+        /* VERDE PADRÃO */
+        :root {
+            --verde-escuro: #0b6e4f;
+            --verde-medio: #10a56f;
+            --verde-claro: #d4f5df;
         }
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #0077b6, #0096c7);
-            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
+            padding: 80px 20px 50px;
             color: white;
             text-align: center;
+            position: relative;
         }
 
-        header h1 {
-            font-size: 2.6rem;
-            font-weight: 700;
-            margin-bottom: 10px;
+        /* Logo */
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
         }
 
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+        .logo-container img {
+            height: 85px;
+            border-radius: 8px;
+            background: white;
+            padding: 5px;
         }
 
-        /* Menu */
         nav {
             background: white;
             padding: 15px 20px;
@@ -58,21 +64,19 @@
             display: flex;
             justify-content: center;
             gap: 30px;
+            flex-wrap: wrap;
             list-style: none;
         }
 
         nav a {
             text-decoration: none;
             font-weight: 600;
-            color: #0077b6;
+            color: var(--verde-escuro);
             transition: 0.3s;
         }
 
-        nav a:hover {
-            color: #023e8a;
-        }
+        nav a:hover { color: var(--verde-medio); }
 
-        /* Container */
         .container {
             max-width: 1000px;
             margin: 40px auto;
@@ -84,6 +88,7 @@
             padding: 25px;
             margin-bottom: 30px;
             border-radius: 12px;
+            border-left: 6px solid var(--verde-medio);
             box-shadow: 0 4px 12px rgba(0,0,0,0.06);
             transition: 0.3s;
         }
@@ -93,33 +98,6 @@
             box-shadow: 0 6px 18px rgba(0,0,0,0.12);
         }
 
-        h2 {
-            margin-bottom: 15px;
-            color: #0077b6;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        /* Rodapé */
-        footer {
-            background: #001219;
-            color: white;
-            text-align: center;
-            padding: 25px 10px;
-            margin-top: 50px;
-        }
-
-        footer p {
-            opacity: 0.7;
-        }
-
-        /* Cards */
         .cards {
             display: grid;
             gap: 20px;
@@ -130,110 +108,211 @@
             background: #fff;
             padding: 20px;
             border-radius: 12px;
+            border-left: 5px solid var(--verde-escuro);
             box-shadow: 0 4px 14px rgba(0,0,0,0.08);
             transition: 0.3s;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
+        .card:hover { transform: translateY(-5px); }
+
+        h2 { color: var(--verde-escuro); margin-bottom: 15px; }
+        h3 { margin-bottom: 10px; color: var(--verde-escuro); }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+
+        footer {
+            background: var(--verde-escuro);
+            color: white;
+            text-align: center;
+            padding: 25px 10px;
+            margin-top: 50px;
         }
 
-        .card i {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #0096c7;
+        footer p { opacity: 0.7; }
+
+        /* Botão PDF */
+        .pdf-btn {
+            display: inline-block;
+            background: #0b8f5a;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
         }
 
+        .pdf-btn:hover {
+            background: #086a44;
+        }
     </style>
 </head>
 
 <body>
 
+    <!-- LOGO DO HOSPITAL -->
+    <header>
+        <div class="logo-container">
+            <!-- SUBSTITUA A IMAGEM ABAIXO PELA LOGO DO HOSPITAL VILA NOVA -->
+            <img src="https://via.placeholder.com/200x80?text=HOSPITAL+VILA+NOVA" alt="Logo Hospital Vila Nova">
+        </div>
+
+        <h1>Guia Completo para Conferência de Prontuários</h1>
+        <p>Organização, segurança e qualidade nas informações administrativas.</p>
+    </header>
+
     <nav>
         <ul>
-            <li><a href="#o-que-e">O que é?</a></li>
+            <li><a href="#download">PDF</a></li>
+            <li><a href="#importancia">Importância</a></li>
+            <li><a href="#materiais">Materiais</a></li>
+            <li><a href="#o-que-e">Prontuário</a></li>
             <li><a href="#preparo">Preparo</a></li>
-            <li><a href="#passos">Passo a passo</a></li>
-            <li><a href="#privacidade">Privacidade</a></li>
-            <li><a href="#finalizacao">Finalização</a></li>
+            <li><a href="#passos">Passos</a></li>
+            <li><a href="#erros">Erros</a></li>
+            <li><a href="#boas-praticas">Boas práticas</a></li>
+            <li><a href="#fluxo">Fluxo</a></li>
+            <li><a href="#faq">FAQ</a></li>
         </ul>
     </nav>
 
-    <header>
-        <h1>Guia Completo para Conferência de Prontuários</h1>
-        <p>Boas práticas, organização e verificação administrativa com clareza e segurança.</p>
-    </header>
-
     <div class="container">
+
+        <!-- DOWNLOAD PDF -->
+        <section id="download">
+            <h2><i class="fa-solid fa-file-pdf"></i> Baixar PDF</h2>
+            <p>Clique no botão abaixo para baixar o checklist em PDF.</p>
+
+            <a class="pdf-btn" href="checklist.pdf" download>
+                <i class="fa-solid fa-download"></i> Baixar PDF
+            </a>
+        </section>
+
+        <!-- IMPORTÂNCIA -->
+        <section id="importancia">
+            <h2><i class="fa-solid fa-star"></i> Importância da conferência</h2>
+            <ul>
+                <li>Padronização e legibilidade das informações.</li>
+                <li>Correção de dados administrativos.</li>
+                <li>Organização para auditorias internas e externas.</li>
+                <li>Respeito às normas legais e institucionais.</li>
+                <li>Segurança e integridade das informações.</li>
+            </ul>
+        </section>
+
+        <!-- MATERIAIS -->
+        <section id="materiais">
+            <h2><i class="fa-solid fa-folder-open"></i> Materiais necessários</h2>
+            <ul>
+                <li>Checklist de conferência oficial.</li>
+                <li>Acesso autorizado ao prontuário.</li>
+                <li>Ferramenta de anotação.</li>
+                <li>Ambiente silencioso e seguro.</li>
+            </ul>
+        </section>
 
         <!-- O QUE É -->
         <section id="o-que-e">
             <h2><i class="fa-solid fa-notes-medical"></i> O que é um prontuário?</h2>
             <p>
-                O prontuário é o conjunto de informações registradas por profissionais de saúde durante o atendimento ao paciente.
-                Ele deve ser organizado, padronizado e protegido, seguindo normas legais e institucionais.
+                O prontuário reúne informações registradas durante o atendimento e deve manter organização,
+                legibilidade e conformidade institucional.
             </p>
         </section>
 
         <!-- PREPARO -->
         <section id="preparo">
-            <h2><i class="fa-solid fa-clipboard-check"></i> Antes de começar a conferência</h2>
-
+            <h2><i class="fa-solid fa-clipboard-check"></i> Antes de começar</h2>
             <div class="cards">
                 <div class="card">
                     <i class="fa-solid fa-id-card"></i>
                     <h3>Autorização</h3>
-                    <p>Confirme que você tem permissão para acessar e revisar os prontuários.</p>
+                    <p>Confirme se possui permissão formal.</p>
                 </div>
 
                 <div class="card">
                     <i class="fa-solid fa-shield-halved"></i>
                     <h3>Sigilo</h3>
-                    <p>Respeite a confidencialidade dos dados e siga normas como a LGPD.</p>
+                    <p>Proteja dados sensíveis conforme a LGPD.</p>
                 </div>
 
                 <div class="card">
                     <i class="fa-solid fa-list-check"></i>
                     <h3>Checklist</h3>
-                    <p>Tenha em mãos o protocolo de conferência adotado pela instituição.</p>
+                    <p>Use o checklist oficial da instituição.</p>
                 </div>
             </div>
         </section>
 
         <!-- PASSOS -->
         <section id="passos">
-            <h2><i class="fa-solid fa-list-ul"></i> Passo a passo da conferência</h2>
+            <h2><i class="fa-solid fa-list-ul"></i> Passo a passo</h2>
             <ul>
-                <li><strong>1. Identificação:</strong> nome completo, data de nascimento e número de registro.</li>
-                <li><strong>2. Organização física/digital:</strong> páginas ordenadas, datas, assinaturas e documentos anexos.</li>
-                <li><strong>3. Registros de atendimento:</strong> cada atendimento deve incluir data, horário e identificação do profissional.</li>
-                <li><strong>4. Legibilidade:</strong> verificar se as informações estão claras e compreensíveis.</li>
-                <li><strong>5. Completude:</strong> todos os campos obrigatórios devem estar preenchidos.</li>
-                <li><strong>6. Conformidade institucional:</strong> checar se segue padrões e normas internas.</li>
+                <li>Verifique a identificação do paciente.</li>
+                <li>Organize páginas e documentos.</li>
+                <li>Confirme datas e assinaturas.</li>
+                <li>Cheque campos obrigatórios.</li>
+                <li>Valide anexos.</li>
             </ul>
         </section>
 
-        <!-- PRIVACIDADE -->
-        <section id="privacidade">
-            <h2><i class="fa-solid fa-lock"></i> Cuidados com a privacidade</h2>
-            <p>
-                Dados de saúde são informações sensíveis. Evite compartilhar, reproduzir ou acessar sem justificativa.
-                Utilize sempre sistemas protegidos e siga os protocolos estabelecidos pela sua instituição.
-            </p>
+        <!-- ERROS -->
+        <section id="erros">
+            <h2><i class="fa-solid fa-exclamation-triangle"></i> Erros comuns</h2>
+            <ul>
+                <li>Assinaturas faltando.</li>
+                <li>Páginas desorganizadas.</li>
+                <li>Campos incompletos.</li>
+                <li>Anexos ausentes.</li>
+            </ul>
         </section>
 
-        <!-- FINALIZAÇÃO -->
-        <section id="finalizacao">
-            <h2><i class="fa-solid fa-check-double"></i> Finalizando a conferência</h2>
+        <!-- BOAS PRÁTICAS -->
+        <section id="boas-praticas">
+            <h2><i class="fa-solid fa-thumbs-up"></i> Boas práticas</h2>
             <ul>
-                <li>Registre inconsistências conforme o procedimento institucional.</li>
-                <li>Informe o setor responsável sobre possíveis correções.</li>
-                <li>Garanta que o prontuário seja armazenado adequadamente após o uso.</li>
-                <li>Mantenha sigilo e respeite a privacidade dos dados revisados.</li>
+                <li>Trabalhe em ambiente silencioso.</li>
+                <li>Checar itens críticos duas vezes.</li>
+                <li>Registrar inconsistências na hora.</li>
             </ul>
+        </section>
+
+        <!-- FLUXO -->
+        <section id="fluxo">
+            <h2><i class="fa-solid fa-diagram-project"></i> Fluxo recomendado</h2>
+            <ol>
+                <li>Receber o prontuário.</li>
+                <li>Verificar autorização.</li>
+                <li>Organizar documentos.</li>
+                <li>Aplicar checklist.</li>
+                <li>Registrar irregularidades.</li>
+                <li>Encaminhar correções.</li>
+                <li>Arquivar corretamente.</li>
+            </ol>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2><i class="fa-solid fa-circle-question"></i> FAQ</h2>
+
+            <h3>Posso corrigir um prontuário?</h3>
+            <p>Somente o profissional responsável pode corrigir.</p>
+
+            <h3>Posso fotografar o prontuário?</h3>
+            <p>Em geral, não. Informações são sigilosas.</p>
+
+            <h3>Preciso de autorização?</h3>
+            <p>Sempre. O acesso deve ser justificado e formal.</p>
         </section>
 
     </div>
 
+    <footer>
+        <p>Guia Educativo — Hospital Vila Nova • 2025</p>
+    </footer>
+
 </body>
 </html>
+
