@@ -25,7 +25,6 @@ body {
 :root {
     --verde-escuro: #0b6e4f;
     --verde-medio: #10a56f;
-    --verde-claro: #d4f5df;
 }
 
 /* HEADER */
@@ -34,6 +33,25 @@ header {
     padding: 100px 20px 60px;
     color: white;
     text-align: center;
+}
+
+/* BOTÃO */
+.botao {
+    display: inline-block;
+    background: var(--verde-medio);
+    color: white;
+    padding: 14px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 25px auto;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
 }
 
 /* NAV */
@@ -81,8 +99,6 @@ section {
     border-left: 6px solid var(--verde-medio);
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     transition: 0.3s;
-
-    /* CORREÇÃO DO SCROLL */
     scroll-margin-top: 100px;
 }
 
@@ -144,30 +160,21 @@ footer p {
 }
 </style>
 </head>
-<script>
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
 
-        const target = document.querySelector(this.getAttribute('href'));
-        const offset = 90; // ajuste fino aqui
-
-        const top = target.offsetTop - offset;
-
-        window.scrollTo({
-            top: top,
-            behavior: 'smooth'
-        });
-    });
-});
-</script>
 <body>
 
 <header>
 <h1>Guia Completo para Conferência de Prontuários</h1>
 <p>Organização, segurança e qualidade nas informações administrativas.</p>
 </header>
-<a href="digitalizacao.html">Digitalização de Prontuários</a>
+
+<!-- BOTÃO NOVO -->
+<div style="text-align:center;">
+    <a href="digitalizacao.html" class="botao">
+        <i class="fa-solid fa-file-medical"></i> Digitalização de Prontuários
+    </a>
+</div>
+
 <nav>
 <ul>
 <li><a href="#importancia">Importância</a></li>
