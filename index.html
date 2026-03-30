@@ -35,23 +35,38 @@ header {
     text-align: center;
 }
 
-/* BOTÃO */
+/* AREA DO BOTÃO */
+.area-botao {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+/* BOTÃO ESTILO CARD */
 .botao {
-    display: inline-block;
-    background: var(--verde-medio);
-    color: white;
-    padding: 14px 25px;
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    color: var(--verde-escuro);
+    padding: 18px 30px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
-    margin: 25px auto;
-    text-align: center;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    border-left: 6px solid var(--verde-medio);
     transition: 0.3s;
 }
 
+.botao i {
+    font-size: 1.3rem;
+    color: var(--verde-medio);
+}
+
 .botao:hover {
-    background: var(--verde-escuro);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* NAV */
@@ -76,7 +91,6 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     color: var(--verde-escuro);
-    transition: 0.3s;
 }
 
 nav a:hover {
@@ -104,7 +118,6 @@ section {
 
 section:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 /* CARDS */
@@ -120,7 +133,6 @@ section:hover {
     border-radius: 12px;
     border-left: 5px solid var(--verde-escuro);
     box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    transition: 0.3s;
 }
 
 .card:hover {
@@ -168,10 +180,11 @@ footer p {
 <p>Organização, segurança e qualidade nas informações administrativas.</p>
 </header>
 
-<!-- BOTÃO NOVO -->
-<div style="text-align:center;">
+<!-- BOTÃO BONITO -->
+<div class="area-botao">
     <a href="digitalizacao.html" class="botao">
-        <i class="fa-solid fa-file-medical"></i> Digitalização de Prontuários
+        <i class="fa-solid fa-folder-open"></i>
+        <span>Digitalização de Prontuários</span>
     </a>
 </div>
 
