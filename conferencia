@@ -35,14 +35,17 @@ header {
     text-align: center;
 }
 
-/* AREA DO BOTÃO */
+/* AREA DO BOTÃO (FAIXA VERDE) */
 .area-botao {
+    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
+    padding: 40px 20px;
     display: flex;
     justify-content: center;
-    margin: 30px 0;
+    margin-top: -40px;
+    border-radius: 0 0 20px 20px;
 }
 
-/* BOTÃO ESTILO CARD */
+/* BOTÃO ESTILO PROFISSIONAL */
 .botao {
     display: flex;
     align-items: center;
@@ -52,10 +55,9 @@ header {
     padding: 18px 30px;
     border-radius: 12px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1rem;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    border-left: 6px solid var(--verde-medio);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     transition: 0.3s;
 }
 
@@ -65,8 +67,7 @@ header {
 }
 
 .botao:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transform: translateY(-5px) scale(1.02);
 }
 
 /* NAV */
@@ -180,7 +181,7 @@ footer p {
 <p>Organização, segurança e qualidade nas informações administrativas.</p>
 </header>
 
-<!-- BOTÃO BONITO -->
+<!-- FAIXA VERDE COM BOTÃO -->
 <div class="area-botao">
     <a href="digitalizacao.html" class="botao">
         <i class="fa-solid fa-folder-open"></i>
