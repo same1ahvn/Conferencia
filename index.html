@@ -14,6 +14,9 @@ body{
     font-family:'Inter',sans-serif;
     background:#eef3f1;
     color:#333;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
 }
 
 /* HEADER */
@@ -71,6 +74,7 @@ nav a{
     max-width:1000px;
     margin:30px auto;
     padding:20px;
+    flex:1;
 }
 
 /* SECTIONS */
@@ -104,32 +108,21 @@ section{
 
 /* FOOTER */
 footer{
-    margin-top:60px;
     background:linear-gradient(135deg,#0b6e4f,#10a56f);
     color:white;
     text-align:center;
-    padding:30px 20px;
-    box-shadow:0 -4px 15px rgba(0,0,0,0.1);
-}
-
-.footer-content{
-    max-width:900px;
-    margin:0 auto;
+    padding:25px;
+    margin-top:auto;
 }
 
 .footer-title{
     font-weight:600;
-    font-size:1rem;
-    margin-bottom:6px;
+    margin-bottom:5px;
 }
 
 .footer-credit{
     font-size:0.9rem;
     opacity:0.85;
-}
-
-footer:hover{
-    filter:brightness(1.05);
 }
 </style>
 </head>
@@ -141,7 +134,6 @@ footer:hover{
 <p>Escolha uma opção abaixo</p>
 </header>
 
-<!-- TELA INICIAL -->
 <div class="home" id="home">
 <div class="card" onclick="abrir('conferencia')">
 <h2>Conferência</h2>
@@ -154,7 +146,7 @@ footer:hover{
 </div>
 </div>
 
-<!-- ================= CONFERÊNCIA ================= -->
+<!-- CONFERÊNCIA -->
 <div id="conferencia" class="hidden">
 <nav>
 <a href="#importancia">Importância</a>
@@ -169,13 +161,101 @@ footer:hover{
 </nav>
 
 <div class="container">
-<!-- (seu conteúdo mantido igual) -->
+
+<section id="importancia">
+<h2>Importância da conferência</h2>
+<ul>
+<li>Padronização e legibilidade das informações.</li>
+<li>Correção de dados administrativos.</li>
+<li>Organização para auditorias internas e externas.</li>
+<li>Respeito às normas legais e institucionais.</li>
+<li>Segurança e integridade das informações.</li>
+</ul>
+</section>
+
+<section id="materiais">
+<h2>Materiais necessários</h2>
+<ul>
+<li>Checklist de conferência oficial.</li>
+<li>Acesso autorizado ao prontuário.</li>
+<li>Ferramenta de anotação.</li>
+<li>Caneta azul.</li>
+<li>Extrator de grampos.</li>
+<li>Se necessário, molha dedo.</li>
+<li>Ambiente silencioso e seguro.</li>
+</ul>
+</section>
+
+<section id="o-que-e">
+<h2>O que é um prontuário?</h2>
+<p>O prontuário reúne informações registradas durante o atendimento e/ou internação do paciente.</p>
+</section>
+
+<section id="preparo">
+<h2>Antes de começar</h2>
+<ul>
+<li>Confirme se possui permissão formal.</li>
+<li>Proteja dados sensíveis conforme a LGPD.</li>
+<li>Use o checklist oficial da instituição.</li>
+</ul>
+</section>
+
+<section id="passos">
+<h2>Passo a passo</h2>
+<ul>
+<li>Verifique a identificação do paciente.</li>
+<li>Organize páginas e documentos.</li>
+<li>Confirme datas e assinaturas.</li>
+<li>Cheque campos obrigatórios.</li>
+<li>Valide anexos.</li>
+</ul>
+</section>
+
+<section id="erros">
+<h2>Erros comuns</h2>
+<ul>
+<li>Assinaturas faltando.</li>
+<li>Páginas desorganizadas.</li>
+<li>Campos incompletos.</li>
+<li>Identificações divergentes.</li>
+<li>Anexos ausentes.</li>
+</ul>
+</section>
+
+<section id="boas-praticas">
+<h2>Boas práticas</h2>
+<ul>
+<li>Trabalhe em ambiente silencioso.</li>
+<li>Checar itens críticos duas vezes.</li>
+<li>Registrar inconsistências na hora.</li>
+</ul>
+</section>
+
+<section id="fluxo">
+<h2>Fluxo recomendado</h2>
+<ol>
+<li>Receber o prontuário.</li>
+<li>Verificar autorização.</li>
+<li>Organizar documentos.</li>
+<li>Aplicar checklist.</li>
+<li>Registrar irregularidades.</li>
+<li>Encaminhar correções.</li>
+<li>Arquivar corretamente.</li>
+</ol>
+</section>
+
+<section id="faq">
+<h2>FAQ</h2>
+<p><strong>Posso corrigir?</strong> Somente o profissional responsável.</p>
+<p><strong>Posso fotografar?</strong> NÃO. Informações sigilosas.</p>
+</section>
+
 </div>
 
 <div class="voltar" onclick="voltar()">← Voltar</div>
 </div>
 
-<!-- ================= DIGITALIZAÇÃO ================= -->
+<!-- DIGITALIZAÇÃO -->
 <div id="digitalizacao" class="hidden">
 <nav>
 <a href="#dig-importancia">Importância</a>
@@ -186,32 +266,74 @@ footer:hover{
 </nav>
 
 <div class="container">
-<!-- (seu conteúdo mantido igual) -->
+
+<section id="dig-importancia">
+<h2>Importância da digitalização</h2>
+<ul>
+<li>Preservação dos documentos físicos.</li>
+<li>Facilidade de acesso às informações.</li>
+<li>Segurança contra perda ou dano.</li>
+<li>Organização do acervo hospitalar.</li>
+</ul>
+</section>
+
+<section id="dig-preparo">
+<h2>Antes de digitalizar</h2>
+<ul>
+<li>Retirar grampos e clipes.</li>
+<li>Organizar documentos na ordem correta.</li>
+<li>Verificar legibilidade.</li>
+</ul>
+</section>
+
+<section id="dig-passos">
+<h2>Passo a passo</h2>
+<ul>
+<li>Configurar o scanner.</li>
+<li>Digitalizar os documentos.</li>
+<li>Conferir qualidade das imagens.</li>
+<li>Salvar corretamente.</li>
+</ul>
+</section>
+
+<section id="dig-erros">
+<h2>Erros comuns</h2>
+<ul>
+<li>Documentos cortados.</li>
+<li>Baixa qualidade de imagem.</li>
+<li>Arquivos salvos incorretamente.</li>
+</ul>
+</section>
+
+<section id="dig-boas">
+<h2>Boas práticas</h2>
+<ul>
+<li>Padronizar nomes dos arquivos.</li>
+<li>Revisar antes de salvar.</li>
+<li>Garantir backup dos documentos.</li>
+</ul>
+</section>
+
 </div>
 
 <div class="voltar" onclick="voltar()">← Voltar</div>
 </div>
 
-<!-- FOOTER CORRETO -->
 <footer>
-<div class="footer-content">
-    <div class="footer-title">SAME • Sistema de Prontuários</div>
-    <div class="footer-credit">YURI SANTOS COUTINHO • 2026</div>
-</div>
+<div class="footer-title">SAME • Sistema de Prontuários</div>
+<div class="footer-credit">YURI SANTOS COUTINHO • 2026</div>
 </footer>
 
 <script>
 function abrir(tipo){
     document.getElementById('home').style.display='none';
     document.getElementById(tipo).classList.remove('hidden');
-    window.scrollTo(0,0);
 }
 
 function voltar(){
     document.getElementById('home').style.display='flex';
     document.getElementById('conferencia').classList.add('hidden');
     document.getElementById('digitalizacao').classList.add('hidden');
-    window.scrollTo(0,0);
 }
 </script>
 
