@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Como Conferir Prontuários - Hospital Vila Nova</title>
+<title>Guia de Conferência - Hospital Vila Nova</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -11,79 +11,88 @@
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+:root {
+    --verde-escuro: #0b6e4f;
+    --verde-medio: #10a56f;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #e9f5ec;
-    color: #333;
-    line-height: 1.7;
-}
-
-:root {
-    --verde-escuro: #0b6e4f;
-    --verde-medio: #10a56f;
+    background: #eef7f1;
+    color: #2d2d2d;
 }
 
 /* HEADER */
 header {
     background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
-    padding: 100px 20px 60px;
-    color: white;
+    padding: 120px 20px 80px;
     text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* AREA DO BOTÃO (FAIXA VERDE) */
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* FAIXA VERDE */
 .area-botao {
-    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
-    padding: 40px 20px;
+    background: linear-gradient(135deg, #0a5d44, #0f8c61);
+    padding: 50px;
     display: flex;
     justify-content: center;
-    margin-top: -40px;
-    border-radius: 0 0 20px 20px;
+    margin-top: -50px;
+    border-radius: 0 0 25px 25px;
 }
 
-/* BOTÃO ESTILO PROFISSIONAL */
+/* BOTÃO */
 .botao {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
     background: white;
     color: var(--verde-escuro);
-    padding: 18px 30px;
-    border-radius: 12px;
+    padding: 20px 35px;
+    border-radius: 14px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.1rem;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    font-size: 1.2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     transition: 0.3s;
 }
 
-.botao i {
-    font-size: 1.3rem;
-    color: var(--verde-medio);
+.botao:hover {
+    transform: translateY(-6px) scale(1.03);
 }
 
-.botao:hover {
-    transform: translateY(-5px) scale(1.02);
+.botao i {
+    font-size: 1.4rem;
+    color: var(--verde-medio);
 }
 
 /* NAV */
 nav {
     background: white;
-    padding: 15px 20px;
+    padding: 18px;
     position: sticky;
     top: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     z-index: 10;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 35px;
     flex-wrap: wrap;
     list-style: none;
 }
@@ -92,52 +101,61 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     color: var(--verde-escuro);
+    padding: 6px 10px;
+    border-radius: 6px;
 }
 
 nav a:hover {
-    color: var(--verde-medio);
+    background: #e6f4ee;
 }
 
 /* CONTAINER */
 .container {
-    max-width: 1000px;
-    margin: 40px auto;
+    max-width: 1100px;
+    margin: 50px auto;
     padding: 20px;
 }
 
-/* SECTIONS */
+/* SEÇÕES */
 section {
     background: white;
-    padding: 25px;
-    margin-bottom: 30px;
-    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 35px;
+    border-radius: 14px;
     border-left: 6px solid var(--verde-medio);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    scroll-margin-top: 110px;
     transition: 0.3s;
-    scroll-margin-top: 100px;
 }
 
 section:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
 
 /* CARDS */
 .cards {
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    border-left: 5px solid var(--verde-escuro);
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    background: #f9fdfb;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #e2eee7;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+}
+
+.card i {
+    font-size: 1.5rem;
+    color: var(--verde-medio);
+    margin-bottom: 10px;
 }
 
 /* TEXTOS */
@@ -147,11 +165,11 @@ h2 {
 }
 
 h3 {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: var(--verde-escuro);
 }
 
-ul {
+ul, ol {
     padding-left: 20px;
 }
 
@@ -164,8 +182,8 @@ footer {
     background: var(--verde-escuro);
     color: white;
     text-align: center;
-    padding: 25px 10px;
-    margin-top: 50px;
+    padding: 30px;
+    margin-top: 60px;
 }
 
 footer p {
@@ -178,14 +196,13 @@ footer p {
 
 <header>
 <h1>Guia Completo para Conferência de Prontuários</h1>
-<p>Organização, segurança e qualidade nas informações administrativas.</p>
+<p>Organização, segurança e qualidade nas informações administrativas</p>
 </header>
 
-<!-- FAIXA VERDE COM BOTÃO -->
 <div class="area-botao">
     <a href="digitalizacao.html" class="botao">
         <i class="fa-solid fa-folder-open"></i>
-        <span>Digitalização de Prontuários</span>
+        Digitalização de Prontuários
     </a>
 </div>
 
@@ -206,120 +223,102 @@ footer p {
 <div class="container">
 
 <section id="importancia">
-<h2><i class="fa-solid fa-star"></i> Importância da conferência</h2>
+<h2>Importância da conferência</h2>
 <ul>
-<li>Padronização e legibilidade das informações.</li>
-<li>Correção de dados administrativos.</li>
-<li>Organização para auditorias internas e externas.</li>
-<li>Respeito às normas legais e institucionais.</li>
-<li>Segurança e integridade das informações.</li>
+<li>Padronização e legibilidade das informações</li>
+<li>Correção de dados administrativos</li>
+<li>Organização para auditorias</li>
+<li>Conformidade legal</li>
+<li>Segurança das informações</li>
 </ul>
 </section>
 
 <section id="materiais">
-<h2><i class="fa-solid fa-folder-open"></i> Materiais necessários</h2>
+<h2>Materiais necessários</h2>
 <ul>
-<li>Checklist de conferência oficial.</li>
-<li>Acesso autorizado ao prontuário.</li>
-<li>Ferramenta de anotação.</li>
-<li>Caneta azul.</li>
-<li>Extrator de grampos.</li>
-<li>Se necessário, molha dedo.</li>
-<li>Ambiente silencioso e seguro.</li>
+<li>Checklist oficial</li>
+<li>Acesso autorizado</li>
+<li>Caneta azul</li>
+<li>Extrator de grampos</li>
+<li>Ambiente adequado</li>
 </ul>
 </section>
 
 <section id="o-que-e">
-<h2><i class="fa-solid fa-notes-medical"></i> O que é um prontuário?</h2>
-<p>
-O prontuário reúne informações registradas durante o atendimento e/ou internação do paciente, devendo manter organização,
-legibilidade e conformidade institucional.
-</p>
+<h2>O que é um prontuário?</h2>
+<p>Documento com todas as informações do atendimento do paciente.</p>
 </section>
 
 <section id="preparo">
-<h2><i class="fa-solid fa-clipboard-check"></i> Antes de começar</h2>
-
+<h2>Antes de começar</h2>
 <div class="cards">
 <div class="card">
 <i class="fa-solid fa-id-card"></i>
 <h3>Autorização</h3>
-<p>Confirme se possui permissão formal.</p>
+<p>Verifique acesso permitido</p>
 </div>
-
 <div class="card">
 <i class="fa-solid fa-shield-halved"></i>
 <h3>Sigilo</h3>
-<p>Proteja dados sensíveis conforme a LGPD.</p>
+<p>Respeite a LGPD</p>
 </div>
-
 <div class="card">
 <i class="fa-solid fa-list-check"></i>
 <h3>Checklist</h3>
-<p>Use o checklist oficial da instituição.</p>
+<p>Siga o padrão institucional</p>
 </div>
 </div>
 </section>
 
 <section id="passos">
-<h2><i class="fa-solid fa-list-ul"></i> Passo a passo</h2>
+<h2>Passo a passo</h2>
 <ul>
-<li>Verifique a identificação do paciente.</li>
-<li>Organize páginas e documentos.</li>
-<li>Confirme datas e assinaturas.</li>
-<li>Cheque campos obrigatórios.</li>
-<li>Valide anexos.</li>
+<li>Verificar identificação</li>
+<li>Organizar documentos</li>
+<li>Checar assinaturas</li>
+<li>Validar campos</li>
 </ul>
 </section>
 
 <section id="erros">
-<h2><i class="fa-solid fa-exclamation-triangle"></i> Erros comuns</h2>
+<h2>Erros comuns</h2>
 <ul>
-<li>Assinaturas faltando.</li>
-<li>Páginas desorganizadas.</li>
-<li>Campos incompletos.</li>
-<li>Identificações divergentes.</li>
-<li>Anexos ausentes.</li>
+<li>Falta de assinatura</li>
+<li>Dados incompletos</li>
+<li>Desorganização</li>
 </ul>
 </section>
 
 <section id="boas-praticas">
-<h2><i class="fa-solid fa-thumbs-up"></i> Boas práticas</h2>
+<h2>Boas práticas</h2>
 <ul>
-<li>Trabalhe em ambiente silencioso.</li>
-<li>Checar itens críticos duas vezes.</li>
-<li>Registrar inconsistências na hora.</li>
+<li>Ambiente silencioso</li>
+<li>Revisão dupla</li>
+<li>Registro imediato</li>
 </ul>
 </section>
 
 <section id="fluxo">
-<h2><i class="fa-solid fa-diagram-project"></i> Fluxo recomendado</h2>
+<h2>Fluxo</h2>
 <ol>
-<li>Receber o prontuário.</li>
-<li>Verificar autorização.</li>
-<li>Organizar documentos.</li>
-<li>Aplicar checklist.</li>
-<li>Registrar irregularidades.</li>
-<li>Encaminhar correções.</li>
-<li>Arquivar corretamente.</li>
+<li>Receber</li>
+<li>Conferir</li>
+<li>Corrigir</li>
+<li>Arquivar</li>
 </ol>
 </section>
 
 <section id="faq">
-<h2><i class="fa-solid fa-circle-question"></i> FAQ</h2>
-
-<h3>Posso corrigir um prontuário?</h3>
-<p>Somente o profissional responsável pode corrigir.</p>
-
-<h3>Posso fotografar o prontuário?</h3>
-<p>NÃO. Informações são sigilosas.</p>
+<h2>FAQ</h2>
+<p><strong>Posso alterar?</strong> Apenas responsável.</p>
+<p><strong>Posso fotografar?</strong> Não.</p>
 </section>
 
 </div>
 
 <footer>
 <p>• YURI SANTOS COUTINHO • 2026</p>
-<p>Guia Educativo — Hospital Vila Nova • 2026</p>
+<p>Hospital Vila Nova</p>
 </footer>
 
 </body>
