@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conferência de Prontuários - SAME</title>
+<title>Guia de Conferência - SAME</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,7 +13,7 @@
 
 body{
     font-family:'Inter',sans-serif;
-    background:#f4f7f6;
+    background:#eef3f1;
     color:#333;
 }
 
@@ -21,77 +21,75 @@ body{
 header{
     background:linear-gradient(135deg,#0b6e4f,#10a56f);
     color:white;
-    padding:40px 20px;
+    padding:60px 20px;
     text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* MENU */
-.menu{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-    max-width:900px;
-    margin:30px auto;
-    padding:0 20px;
+/* BOTÃO SUPERIOR */
+.topo{
+    display:flex;
+    justify-content:center;
+    margin-top:-25px;
 }
 
-.card-menu{
+.botao{
     background:white;
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
+    padding:15px 25px;
+    border-radius:12px;
     text-decoration:none;
-    color:#333;
-    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    color:#0b6e4f;
+    font-weight:600;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
     transition:0.3s;
 }
 
-.card-menu:hover{
-    transform:translateY(-6px);
-}
-
-.card-menu i{
-    font-size:35px;
-    color:#10a56f;
-    margin-bottom:10px;
+.botao:hover{
+    transform:translateY(-4px);
 }
 
 /* NAV */
 nav{
     background:white;
     padding:15px;
-    text-align:center;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
     position:sticky;
     top:0;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 nav a{
     margin:0 10px;
     text-decoration:none;
-    font-weight:600;
     color:#0b6e4f;
+    font-weight:600;
 }
 
 /* CONTAINER */
 .container{
-    max-width:900px;
-    margin:30px auto;
+    max-width:1000px;
+    margin:40px auto;
     padding:20px;
 }
 
-/* SECTIONS */
+/* SEÇÕES */
 section{
     background:white;
-    padding:25px;
-    border-radius:12px;
+    padding:30px;
     margin-bottom:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    border-left:6px solid #10a56f;
+    transition:0.3s;
+}
+
+section:hover{
+    transform:translateY(-3px);
 }
 
 h2{
-    color:#0b6e4f;
     margin-bottom:15px;
+    color:#0b6e4f;
 }
 
 ul{
@@ -99,7 +97,7 @@ ul{
 }
 
 li{
-    margin-bottom:8px;
+    margin-bottom:10px;
 }
 
 /* FOOTER */
@@ -107,7 +105,7 @@ footer{
     background:#0b6e4f;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
     margin-top:40px;
 }
 </style>
@@ -117,19 +115,12 @@ footer{
 
 <header>
 <h1>Guia Completo para Conferência de Prontuários</h1>
-<p>Organização, segurança e qualidade nas informações administrativas</p>
+<p>Organização, segurança e qualidade nas informações administrativas.</p>
 </header>
 
-<!-- MENU -->
-<div class="menu">
-<a href="#conteudo" class="card-menu">
-<i class="fa-solid fa-clipboard-list"></i>
-<h3>Conferência</h3>
-</a>
-
-<a href="digitalizacao.html" class="card-menu">
-<i class="fa-solid fa-file-pdf"></i>
-<h3>Digitalização</h3>
+<div class="topo">
+<a href="digitalizacao.html" class="botao">
+📁 Ir para Digitalização
 </a>
 </div>
 
@@ -140,12 +131,12 @@ footer{
 <a href="#preparo">Preparo</a>
 <a href="#passos">Passos</a>
 <a href="#erros">Erros</a>
-<a href="#boas">Boas práticas</a>
+<a href="#boas-praticas">Boas práticas</a>
 <a href="#fluxo">Fluxo</a>
 <a href="#faq">FAQ</a>
 </nav>
 
-<div class="container" id="conteudo">
+<div class="container">
 
 <section id="importancia">
 <h2>Importância da conferência</h2>
@@ -166,33 +157,36 @@ footer{
 <li>Ferramenta de anotação.</li>
 <li>Caneta azul.</li>
 <li>Extrator de grampos.</li>
-<li>Molha dedo (se necessário).</li>
-<li>Ambiente silencioso.</li>
+<li>Se necessário, molha dedo.</li>
+<li>Ambiente silencioso e seguro.</li>
 </ul>
 </section>
 
 <section id="o-que-e">
 <h2>O que é um prontuário?</h2>
-<p>O prontuário reúne informações registradas durante o atendimento e/ou internação do paciente.</p>
+<p>
+O prontuário reúne informações registradas durante o atendimento e/ou internação do paciente, devendo manter organização,
+legibilidade e conformidade institucional.
+</p>
 </section>
 
 <section id="preparo">
 <h2>Antes de começar</h2>
 <ul>
-<li>Verifique autorização.</li>
-<li>Respeite o sigilo (LGPD).</li>
-<li>Use checklist institucional.</li>
+<li>Confirme se possui permissão formal.</li>
+<li>Proteja dados sensíveis conforme a LGPD.</li>
+<li>Use o checklist oficial da instituição.</li>
 </ul>
 </section>
 
 <section id="passos">
 <h2>Passo a passo</h2>
 <ul>
-<li>Verificar identificação do paciente.</li>
-<li>Organizar documentos.</li>
-<li>Confirmar datas e assinaturas.</li>
-<li>Checar campos obrigatórios.</li>
-<li>Validar anexos.</li>
+<li>Verifique a identificação do paciente.</li>
+<li>Organize páginas e documentos.</li>
+<li>Confirme datas e assinaturas.</li>
+<li>Cheque campos obrigatórios.</li>
+<li>Valide anexos.</li>
 </ul>
 </section>
 
@@ -202,45 +196,49 @@ footer{
 <li>Assinaturas faltando.</li>
 <li>Páginas desorganizadas.</li>
 <li>Campos incompletos.</li>
-<li>Identificação divergente.</li>
+<li>Identificações divergentes.</li>
 <li>Anexos ausentes.</li>
 </ul>
 </section>
 
-<section id="boas">
+<section id="boas-praticas">
 <h2>Boas práticas</h2>
 <ul>
-<li>Ambiente silencioso.</li>
-<li>Revisar duas vezes.</li>
-<li>Registrar inconsistências.</li>
+<li>Trabalhe em ambiente silencioso.</li>
+<li>Checar itens críticos duas vezes.</li>
+<li>Registrar inconsistências na hora.</li>
 </ul>
 </section>
 
 <section id="fluxo">
 <h2>Fluxo recomendado</h2>
 <ol>
-<li>Receber prontuário</li>
-<li>Verificar autorização</li>
-<li>Organizar documentos</li>
-<li>Aplicar checklist</li>
-<li>Registrar erros</li>
-<li>Encaminhar correção</li>
-<li>Arquivar</li>
+<li>Receber o prontuário.</li>
+<li>Verificar autorização.</li>
+<li>Organizar documentos.</li>
+<li>Aplicar checklist.</li>
+<li>Registrar irregularidades.</li>
+<li>Encaminhar correções.</li>
+<li>Arquivar corretamente.</li>
 </ol>
 </section>
 
 <section id="faq">
 <h2>FAQ</h2>
 
-<p><strong>Posso corrigir?</strong><br>Somente o profissional responsável.</p>
+<h3>Posso corrigir um prontuário?</h3>
+<p>Somente o profissional responsável pode corrigir.</p>
 
-<p><strong>Posso fotografar?</strong><br>Não. Informação sigilosa.</p>
+<h3>Posso fotografar o prontuário?</h3>
+<p>NÃO. Informações são sigilosas.</p>
+
 </section>
 
 </div>
 
 <footer>
 <p>• YURI SANTOS COUTINHO • 2026</p>
+<p>Guia Educativo — Hospital Vila Nova</p>
 </footer>
 
 </body>
