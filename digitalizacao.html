@@ -2,119 +2,84 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digitalização de Prontuários - Hospital Vila Nova</title>
+<title>Digitalização - SAME</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-:root {
-    --verde-escuro: #0b6e4f;
-    --verde-medio: #10a56f;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background: #eef7f1;
-    color: #2d2d2d;
+body{
+    font-family:'Inter',sans-serif;
+    background:#f4f7f6;
 }
 
 /* HEADER */
-header {
-    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
-    padding: 100px 20px;
-    text-align: center;
-    color: white;
+header{
+    background:#0b6e4f;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-header h1 {
-    font-size: 2.3rem;
-}
-
-header p {
-    margin-top: 10px;
-}
-
-/* BOTÃO VOLTAR */
-.voltar {
-    display: inline-block;
-    margin-top: 20px;
-    background: white;
-    color: var(--verde-escuro);
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
+header a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
 }
 
 /* CONTAINER */
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
+.container{
+    max-width:800px;
+    margin:40px auto;
+    padding:20px;
 }
 
-/* SECTIONS */
-section {
-    background: white;
-    padding: 25px;
-    margin-bottom: 30px;
-    border-radius: 12px;
-    border-left: 6px solid var(--verde-medio);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* CARDS */
-.cards {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.card {
-    background: #f9fdfb;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #e2eee7;
+/* CARD */
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
 }
 
 /* FORM */
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:20px;
 }
 
-input, select {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+input,select{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
 }
 
-button {
-    background: var(--verde-medio);
-    color: white;
-    padding: 14px;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
+button{
+    background:#10a56f;
+    color:white;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
 }
 
-button:hover {
-    background: var(--verde-escuro);
+button:hover{
+    background:#0b6e4f;
 }
 
 /* FOOTER */
-footer {
-    background: var(--verde-escuro);
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 50px;
+footer{
+    text-align:center;
+    margin-top:40px;
+    padding:20px;
+    color:#555;
 }
 </style>
 </head>
@@ -122,54 +87,18 @@ footer {
 <body>
 
 <header>
-<h1>Digitalização de Prontuários</h1>
-<p>Registro e organização digital segura</p>
-
-<a href="index.html" class="voltar">
-    <i class="fa-solid fa-arrow-left"></i> Voltar
-</a>
+<h2>Digitalização</h2>
+<a href="index.html">Voltar</a>
 </header>
 
 <div class="container">
 
-<section>
-<h2>Importância</h2>
-<p>A digitalização garante segurança, acesso rápido e preservação dos documentos físicos.</p>
-</section>
-
-<section>
-<h2>Etapas do Processo</h2>
-<div class="cards">
-
 <div class="card">
-<h3>1. Preparação</h3>
-<p>Organizar documentos e retirar grampos.</p>
-</div>
-
-<div class="card">
-<h3>2. Digitalização</h3>
-<p>Escanear com qualidade adequada.</p>
-</div>
-
-<div class="card">
-<h3>3. Conferência</h3>
-<p>Verificar legibilidade e ordem.</p>
-</div>
-
-<div class="card">
-<h3>4. Armazenamento</h3>
-<p>Salvar corretamente no sistema.</p>
-</div>
-
-</div>
-</section>
-
-<section>
 <h2>Registrar Digitalização</h2>
 
 <form class="form">
-<input type="text" placeholder="Nome do Paciente" required>
-<input type="text" placeholder="Número do Prontuário" required>
+<input type="text" placeholder="Nome do Paciente">
+<input type="text" placeholder="Número do Prontuário">
 
 <select>
 <option>Status</option>
@@ -178,18 +107,15 @@ footer {
 <option>Erro</option>
 </select>
 
-<button type="submit">
-    <i class="fa-solid fa-floppy-disk"></i> Salvar Registro
-</button>
+<button>Salvar</button>
 </form>
 
-</section>
+</div>
 
 </div>
 
 <footer>
-    <p>• SAME • YURI SANTOS COUTINHO • 2026</p>
-<p>• SAME • Sistema de Arquivo Médico • 2026</p>
+<p>SAME • Sistema de Arquivo Médico</p>
 </footer>
 
 </body>
