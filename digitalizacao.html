@@ -2,82 +2,119 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Digitalização de Prontuários</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digitalização de Prontuários - Hospital Vila Nova</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    font-family: 'Inter', sans-serif;
-    background: #e9f5ec;
-    color: #333;
-}
 
 :root {
     --verde-escuro: #0b6e4f;
     --verde-medio: #10a56f;
 }
 
+body {
+    font-family: 'Inter', sans-serif;
+    background: #eef7f1;
+    color: #2d2d2d;
+}
+
+/* HEADER */
 header {
     background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
+    padding: 100px 20px;
+    text-align: center;
     color: white;
-    text-align: center;
-    padding: 60px 20px;
 }
 
-nav {
+header h1 {
+    font-size: 2.3rem;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+/* BOTÃO VOLTAR */
+.voltar {
+    display: inline-block;
+    margin-top: 20px;
     background: white;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
     color: var(--verde-escuro);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: 600;
 }
 
-nav a:hover {
-    color: var(--verde-medio);
-}
-
+/* CONTAINER */
 .container {
     max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
 }
 
+/* SECTIONS */
 section {
     background: white;
     padding: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     border-radius: 12px;
     border-left: 6px solid var(--verde-medio);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-h2 {
-    color: var(--verde-escuro);
-    margin-bottom: 10px;
+/* CARDS */
+.cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-ul {
-    padding-left: 20px;
+.card {
+    background: #f9fdfb;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2eee7;
 }
 
-li {
-    margin-bottom: 10px;
+/* FORM */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
+input, select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: var(--verde-medio);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--verde-escuro);
+}
+
+/* FOOTER */
 footer {
     background: var(--verde-escuro);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+    margin-top: 50px;
 }
 </style>
 </head>
@@ -85,71 +122,73 @@ footer {
 <body>
 
 <header>
-    <h1>Digitalização de Prontuários</h1>
-    <p>Padronização e segurança no processo digital</p>
-</header>
+<h1>Digitalização de Prontuários</h1>
+<p>Registro e organização digital segura</p>
 
-<nav>
-    <a href="index.html">Voltar ao Guia</a>
-</nav>
+<a href="index.html" class="voltar">
+    <i class="fa-solid fa-arrow-left"></i> Voltar
+</a>
+</header>
 
 <div class="container">
 
 <section>
-    <h2>Importância da Digitalização</h2>
-    <ul>
-        <li>Preservação dos documentos físicos.</li>
-        <li>Facilidade de acesso às informações.</li>
-        <li>Redução de espaço físico.</li>
-        <li>Maior segurança e rastreabilidade.</li>
-    </ul>
+<h2>Importância</h2>
+<p>A digitalização garante segurança, acesso rápido e preservação dos documentos físicos.</p>
 </section>
 
 <section>
-    <h2>Antes de Digitalizar</h2>
-    <ul>
-        <li>Conferir se o prontuário está completo.</li>
-        <li>Organizar as páginas corretamente.</li>
-        <li>Retirar grampos e clipes.</li>
-        <li>Verificar legibilidade dos documentos.</li>
-    </ul>
+<h2>Etapas do Processo</h2>
+<div class="cards">
+
+<div class="card">
+<h3>1. Preparação</h3>
+<p>Organizar documentos e retirar grampos.</p>
+</div>
+
+<div class="card">
+<h3>2. Digitalização</h3>
+<p>Escanear com qualidade adequada.</p>
+</div>
+
+<div class="card">
+<h3>3. Conferência</h3>
+<p>Verificar legibilidade e ordem.</p>
+</div>
+
+<div class="card">
+<h3>4. Armazenamento</h3>
+<p>Salvar corretamente no sistema.</p>
+</div>
+
+</div>
 </section>
 
 <section>
-    <h2>Durante a Digitalização</h2>
-    <ul>
-        <li>Utilizar scanner adequado.</li>
-        <li>Garantir boa resolução.</li>
-        <li>Digitalizar na ordem correta.</li>
-        <li>Evitar cortes ou páginas incompletas.</li>
-    </ul>
-</section>
+<h2>Registrar Digitalização</h2>
 
-<section>
-    <h2>Após a Digitalização</h2>
-    <ul>
-        <li>Revisar todos os arquivos.</li>
-        <li>Nomear corretamente os documentos.</li>
-        <li>Salvar no sistema oficial.</li>
-        <li>Garantir backup das informações.</li>
-    </ul>
-</section>
+<form class="form">
+<input type="text" placeholder="Nome do Paciente" required>
+<input type="text" placeholder="Número do Prontuário" required>
 
-<section>
-    <h2>Erros Comuns</h2>
-    <ul>
-        <li>Páginas cortadas.</li>
-        <li>Ordem incorreta.</li>
-        <li>Baixa qualidade de imagem.</li>
-        <li>Documentos faltando.</li>
-    </ul>
+<select>
+<option>Status</option>
+<option>Digitalizado</option>
+<option>Pendente</option>
+<option>Erro</option>
+</select>
+
+<button type="submit">
+    <i class="fa-solid fa-floppy-disk"></i> Salvar Registro
+</button>
+</form>
+
 </section>
 
 </div>
 
 <footer>
-    <p>• YURI SANTOS COUTINHO • 2026</p>
-    <p>Hospital Vila Nova • 2026</p>
+<p>• SAME • Sistema de Arquivo Médico • 2026</p>
 </footer>
 
 </body>
