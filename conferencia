@@ -2,192 +2,98 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guia de Conferência - Hospital Vila Nova</title>
+<title>SAME - Sistema</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-:root {
-    --verde-escuro: #0b6e4f;
-    --verde-medio: #10a56f;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background: #eef7f1;
-    color: #2d2d2d;
+body{
+    font-family:'Inter',sans-serif;
+    background:#f4f7f6;
 }
 
 /* HEADER */
-header {
-    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
-    padding: 120px 20px 80px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+header{
+    background:#0b6e4f;
+    color:white;
+    padding:30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-header h1 {
-    font-size: 2.5rem;
+header h1{
+    font-size:1.3rem;
 }
 
-header p {
-    margin-top: 10px;
-    opacity: 0.9;
+/* MENU PRINCIPAL */
+.menu{
+    display:flex;
+    gap:20px;
 }
 
-/* FAIXA VERDE */
-.area-botao {
-    background: linear-gradient(135deg, #0a5d44, #0f8c61);
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    margin-top: -50px;
-    border-radius: 0 0 25px 25px;
+.card-menu{
+    flex:1;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    text-decoration:none;
+    color:#333;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
 
-/* BOTÃO */
-.botao {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background: white;
-    color: var(--verde-escuro);
-    padding: 20px 35px;
-    border-radius: 14px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    transition: 0.3s;
+.card-menu:hover{
+    transform:translateY(-8px);
 }
 
-.botao:hover {
-    transform: translateY(-6px) scale(1.03);
-}
-
-.botao i {
-    font-size: 1.4rem;
-    color: var(--verde-medio);
-}
-
-/* NAV */
-nav {
-    background: white;
-    padding: 18px;
-    position: sticky;
-    top: 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    z-index: 10;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    flex-wrap: wrap;
-    list-style: none;
-}
-
-nav a {
-    text-decoration: none;
-    font-weight: 600;
-    color: var(--verde-escuro);
-    padding: 6px 10px;
-    border-radius: 6px;
-}
-
-nav a:hover {
-    background: #e6f4ee;
+.card-menu i{
+    font-size:40px;
+    color:#10a56f;
+    margin-bottom:15px;
 }
 
 /* CONTAINER */
-.container {
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 20px;
+.container{
+    max-width:900px;
+    margin:50px auto;
+    padding:20px;
 }
 
 /* SEÇÕES */
-section {
-    background: white;
-    padding: 30px;
-    margin-bottom: 35px;
-    border-radius: 14px;
-    border-left: 6px solid var(--verde-medio);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    scroll-margin-top: 110px;
-    transition: 0.3s;
+section{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:25px;
 }
 
-section:hover {
-    transform: translateY(-4px);
+/* NAV */
+nav{
+    background:white;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* CARDS */
-.cards {
-    display: grid;
-    gap: 25px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.card {
-    background: #f9fdfb;
-    padding: 25px;
-    border-radius: 14px;
-    border: 1px solid #e2eee7;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-}
-
-.card i {
-    font-size: 1.5rem;
-    color: var(--verde-medio);
-    margin-bottom: 10px;
-}
-
-/* TEXTOS */
-h2 {
-    color: var(--verde-escuro);
-    margin-bottom: 15px;
-}
-
-h3 {
-    margin-bottom: 8px;
-    color: var(--verde-escuro);
-}
-
-ul, ol {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 10px;
+nav a{
+    margin:0 10px;
+    text-decoration:none;
+    color:#0b6e4f;
+    font-weight:600;
 }
 
 /* FOOTER */
-footer {
-    background: var(--verde-escuro);
-    color: white;
-    text-align: center;
-    padding: 30px;
-    margin-top: 60px;
-}
-
-footer p {
-    opacity: 0.7;
+footer{
+    background:#0b6e4f;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
 }
 </style>
 </head>
@@ -195,130 +101,35 @@ footer p {
 <body>
 
 <header>
-<h1>Guia Completo para Conferência de Prontuários</h1>
-<p>Organização, segurança e qualidade nas informações administrativas</p>
+<h1>SAME - Sistema de Prontuários</h1>
 </header>
-
-<div class="area-botao">
-    <a href="digitalizacao.html" class="botao">
-        <i class="fa-solid fa-folder-open"></i>
-        Digitalização de Prontuários
-    </a>
-</div>
-
-<nav>
-<ul>
-<li><a href="#importancia">Importância</a></li>
-<li><a href="#materiais">Materiais</a></li>
-<li><a href="#o-que-e">Prontuário</a></li>
-<li><a href="#preparo">Preparo</a></li>
-<li><a href="#passos">Passos</a></li>
-<li><a href="#erros">Erros</a></li>
-<li><a href="#boas-praticas">Boas práticas</a></li>
-<li><a href="#fluxo">Fluxo</a></li>
-<li><a href="#faq">FAQ</a></li>
-</ul>
-</nav>
 
 <div class="container">
 
-<section id="importancia">
-<h2>Importância da conferência</h2>
-<ul>
-<li>Padronização e legibilidade das informações</li>
-<li>Correção de dados administrativos</li>
-<li>Organização para auditorias</li>
-<li>Conformidade legal</li>
-<li>Segurança das informações</li>
-</ul>
-</section>
+<!-- MENU PRINCIPAL -->
+<div class="menu">
+<a href="index.html" class="card-menu">
+<i class="fa-solid fa-clipboard-list"></i>
+<h3>Conferência</h3>
+<p>Verificação de prontuários</p>
+</a>
 
-<section id="materiais">
-<h2>Materiais necessários</h2>
-<ul>
-<li>Checklist oficial</li>
-<li>Acesso autorizado</li>
-<li>Caneta azul</li>
-<li>Extrator de grampos</li>
-<li>Ambiente adequado</li>
-</ul>
-</section>
-
-<section id="o-que-e">
-<h2>O que é um prontuário?</h2>
-<p>Documento com todas as informações do atendimento do paciente.</p>
-</section>
-
-<section id="preparo">
-<h2>Antes de começar</h2>
-<div class="cards">
-<div class="card">
-<i class="fa-solid fa-id-card"></i>
-<h3>Autorização</h3>
-<p>Verifique acesso permitido</p>
+<a href="digitalizacao.html" class="card-menu">
+<i class="fa-solid fa-file-pdf"></i>
+<h3>Digitalização</h3>
+<p>Registro e organização</p>
+</a>
 </div>
-<div class="card">
-<i class="fa-solid fa-shield-halved"></i>
-<h3>Sigilo</h3>
-<p>Respeite a LGPD</p>
-</div>
-<div class="card">
-<i class="fa-solid fa-list-check"></i>
-<h3>Checklist</h3>
-<p>Siga o padrão institucional</p>
-</div>
-</div>
-</section>
 
-<section id="passos">
-<h2>Passo a passo</h2>
-<ul>
-<li>Verificar identificação</li>
-<li>Organizar documentos</li>
-<li>Checar assinaturas</li>
-<li>Validar campos</li>
-</ul>
-</section>
-
-<section id="erros">
-<h2>Erros comuns</h2>
-<ul>
-<li>Falta de assinatura</li>
-<li>Dados incompletos</li>
-<li>Desorganização</li>
-</ul>
-</section>
-
-<section id="boas-praticas">
-<h2>Boas práticas</h2>
-<ul>
-<li>Ambiente silencioso</li>
-<li>Revisão dupla</li>
-<li>Registro imediato</li>
-</ul>
-</section>
-
-<section id="fluxo">
-<h2>Fluxo</h2>
-<ol>
-<li>Receber</li>
-<li>Conferir</li>
-<li>Corrigir</li>
-<li>Arquivar</li>
-</ol>
-</section>
-
-<section id="faq">
-<h2>FAQ</h2>
-<p><strong>Posso alterar?</strong> Apenas responsável.</p>
-<p><strong>Posso fotografar?</strong> Não.</p>
+<section>
+<h2>Conferência de Prontuários</h2>
+<p>Utilize o menu acima para acessar os módulos do sistema.</p>
 </section>
 
 </div>
 
 <footer>
-<p>• YURI SANTOS COUTINHO • 2026</p>
-<p>Hospital Vila Nova</p>
+<p>• SAME • 2026</p>
 </footer>
 
 </body>
