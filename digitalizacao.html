@@ -2,68 +2,116 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digitalização de Prontuários</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
 body{
     font-family:'Inter',sans-serif;
-    background:#f4f7f6;
+    background:#eef3f1;
+    color:#333;
 }
 
 /* HEADER */
 header{
-    background:#0b6e4f;
+    background:linear-gradient(135deg,#0b6e4f,#10a56f);
     color:white;
-    padding:20px;
+    padding:60px 20px;
     text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
 /* BOTÃO VOLTAR */
+.topo{
+    display:flex;
+    justify-content:center;
+    margin-top:-25px;
+}
+
 .voltar{
-    display:inline-block;
-    margin:20px;
+    background:white;
+    padding:14px 25px;
+    border-radius:12px;
     text-decoration:none;
     color:#0b6e4f;
     font-weight:600;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.voltar:hover{
+    transform:translateY(-4px);
 }
 
 /* CONTAINER */
 .container{
-    max-width:800px;
-    margin:0 auto;
+    max-width:900px;
+    margin:40px auto;
     padding:20px;
 }
 
-/* CARD */
+/* CARD PRINCIPAL */
 .card{
     background:white;
     padding:30px;
-    border-radius:12px;
-    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    border-left:6px solid #10a56f;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+}
+
+/* FORM */
+.form{
+    margin-top:20px;
 }
 
 input,select{
     width:100%;
-    padding:12px;
+    padding:14px;
     margin-bottom:15px;
-    border-radius:8px;
+    border-radius:10px;
     border:1px solid #ccc;
+    font-size:0.95rem;
+    transition:0.2s;
 }
 
+input:focus,select:focus{
+    border-color:#10a56f;
+    outline:none;
+}
+
+/* BOTÃO */
 button{
     width:100%;
-    padding:15px;
+    padding:16px;
     background:#10a56f;
     color:white;
     border:none;
-    border-radius:10px;
+    border-radius:12px;
     font-weight:600;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
 }
 
 button:hover{
     background:#0b6e4f;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    margin-top:40px;
+    padding:20px;
+    color:#666;
 }
 </style>
 </head>
@@ -71,16 +119,21 @@ button:hover{
 <body>
 
 <header>
-<h2>Digitalização de Prontuários</h2>
+<h1>Digitalização de Prontuários</h1>
+<p>Registro e controle de documentos digitalizados</p>
 </header>
 
-<a href="index.html" class="voltar">← Voltar</a>
+<div class="topo">
+<a href="index.html" class="voltar">← Voltar para Conferência</a>
+</div>
 
 <div class="container">
+
 <div class="card">
 
-<h3>Registro de Digitalização</h3>
+<h2>Registro de Digitalização</h2>
 
+<div class="form">
 <input type="text" placeholder="Nome do paciente">
 <input type="text" placeholder="Número do prontuário">
 
@@ -92,9 +145,15 @@ button:hover{
 </select>
 
 <button>Salvar</button>
+</div>
 
 </div>
+
 </div>
+
+<footer>
+<p>SAME • Sistema de Arquivo Médico • 2026</p>
+</footer>
 
 </body>
 </html>
