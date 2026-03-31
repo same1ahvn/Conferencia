@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guia de Conferência - SAME</title>
+<title>SAME - Sistema</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -21,92 +20,86 @@ body{
 header{
     background:linear-gradient(135deg,#0b6e4f,#10a56f);
     color:white;
-    padding:60px 20px;
+    padding:50px 20px;
     text-align:center;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* BOTÃO SUPERIOR */
-.topo{
+/* HOME */
+.home{
     display:flex;
     justify-content:center;
-    margin-top:-25px;
+    gap:30px;
+    margin:60px 20px;
+    flex-wrap:wrap;
 }
 
-.botao{
+.card{
     background:white;
-    padding:15px 25px;
-    border-radius:12px;
-    text-decoration:none;
-    color:#0b6e4f;
-    font-weight:600;
-    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    padding:40px;
+    width:260px;
+    border-radius:15px;
+    text-align:center;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
     transition:0.3s;
 }
 
-.botao:hover{
-    transform:translateY(-4px);
+.card:hover{
+    transform:translateY(-8px);
 }
 
 /* NAV */
 nav{
     background:white;
     padding:15px;
+    text-align:center;
     position:sticky;
     top:0;
-    text-align:center;
+    z-index:10;
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 nav a{
     margin:0 10px;
     text-decoration:none;
-    color:#0b6e4f;
     font-weight:600;
+    color:#0b6e4f;
 }
 
 /* CONTAINER */
 .container{
     max-width:1000px;
-    margin:40px auto;
+    margin:30px auto;
     padding:20px;
 }
 
-/* SEÇÕES */
+/* SECTIONS */
 section{
     background:white;
-    padding:30px;
+    padding:25px;
     margin-bottom:25px;
-    border-radius:14px;
+    border-radius:12px;
     box-shadow:0 6px 18px rgba(0,0,0,0.06);
     border-left:6px solid #10a56f;
-    transition:0.3s;
+    scroll-margin-top:100px;
 }
 
-section:hover{
-    transform:translateY(-3px);
-}
-
-h2{
-    margin-bottom:15px;
-    color:#0b6e4f;
-}
-
-ul{
-    padding-left:20px;
-}
-
-li{
-    margin-bottom:10px;
-}
-
-/* FOOTER */
-footer{
+/* BOTÃO VOLTAR */
+.voltar{
+    display:block;
+    margin:20px auto;
+    width:200px;
+    text-align:center;
+    padding:12px;
     background:#0b6e4f;
     color:white;
-    text-align:center;
-    padding:25px;
-    margin-top:40px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* ESCONDER */
+.hidden{
+    display:none;
 }
 </style>
 </head>
@@ -114,15 +107,25 @@ footer{
 <body>
 
 <header>
-<h1>Guia Completo para Conferência de Prontuários</h1>
-<p>Organização, segurança e qualidade nas informações administrativas.</p>
+<h1>SAME - Sistema de Prontuários</h1>
+<p>Escolha uma opção abaixo</p>
 </header>
 
-<div class="topo">
-<a href="digitalizacao.html" class="botao">
-📁 Ir para Digitalização
-</a>
+<!-- TELA INICIAL -->
+<div class="home" id="home">
+<div class="card" onclick="abrir('conferencia')">
+<h2>Conferência</h2>
+<p>Verificar prontuários</p>
 </div>
+
+<div class="card" onclick="abrir('digitalizacao')">
+<h2>Digitalização</h2>
+<p>Registrar documentos</p>
+</div>
+</div>
+
+<!-- CONFERÊNCIA -->
+<div id="conferencia" class="hidden">
 
 <nav>
 <a href="#importancia">Importância</a>
@@ -164,10 +167,7 @@ footer{
 
 <section id="o-que-e">
 <h2>O que é um prontuário?</h2>
-<p>
-O prontuário reúne informações registradas durante o atendimento e/ou internação do paciente, devendo manter organização,
-legibilidade e conformidade institucional.
-</p>
+<p>O prontuário reúne informações registradas durante o atendimento e/ou internação do paciente.</p>
 </section>
 
 <section id="preparo">
@@ -225,21 +225,58 @@ legibilidade e conformidade institucional.
 
 <section id="faq">
 <h2>FAQ</h2>
+<p><strong>Posso corrigir?</strong> Somente o profissional responsável.</p>
+<p><strong>Posso fotografar?</strong> NÃO. Informações sigilosas.</p>
+</section>
 
-<h3>Posso corrigir um prontuário?</h3>
-<p>Somente o profissional responsável pode corrigir.</p>
+</div>
 
-<h3>Posso fotografar o prontuário?</h3>
-<p>NÃO. Informações são sigilosas.</p>
+<div class="voltar" onclick="voltar()">← Voltar</div>
+
+</div>
+
+<!-- DIGITALIZAÇÃO -->
+<div id="digitalizacao" class="hidden">
+
+<div class="container">
+
+<section>
+<h2>Registro de Digitalização</h2>
+
+<input type="text" placeholder="Nome do paciente"><br><br>
+<input type="text" placeholder="Número do prontuário"><br><br>
+
+<select>
+<option>Status</option>
+<option>Digitalizado</option>
+<option>Pendente</option>
+<option>Erro</option>
+</select><br><br>
+
+<button style="padding:12px;background:#10a56f;color:white;border:none;border-radius:8px;">Salvar</button>
 
 </section>
 
 </div>
 
-<footer>
-<p>• YURI SANTOS COUTINHO • 2026</p>
-<p>Guia Educativo — Hospital Vila Nova</p>
-</footer>
+<div class="voltar" onclick="voltar()">← Voltar</div>
+
+</div>
+
+<script>
+function abrir(tipo){
+    document.getElementById('home').style.display='none';
+    document.getElementById(tipo).classList.remove('hidden');
+    window.scrollTo(0,0);
+}
+
+function voltar(){
+    document.getElementById('home').style.display='flex';
+    document.getElementById('conferencia').classList.add('hidden');
+    document.getElementById('digitalizacao').classList.add('hidden');
+    window.scrollTo(0,0);
+}
+</script>
 
 </body>
 </html>
